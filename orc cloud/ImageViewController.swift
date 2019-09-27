@@ -66,29 +66,36 @@ class ImageViewController: UIViewController {
     private func detectBoundingBoxes(for image: UIImage) {
         GoogleCloudOCR().detect(from: image) { ocrResult in
             self.activityIndicator.stopAnimating()
-            guard let ocrResult = ocrResult else {
-                fatalError("Did not recognize any text in this image")
-            }
-            let result = self.extractEmailAddrIn(text: ocrResult.annotations[0].text)
-            print(result)
-            if result.count == 0 {
-                let alert = UIAlertController(title: "Email not found", message: "", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                    self.dismiss(animated: false, completion: nil)
-                }))
-                self.present(alert, animated: true, completion: nil)
-            } else {
-                let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
-                for i in 1...result.count{
-                    alert.addAction(UIAlertAction(title: result[i-1].replacingOccurrences(of: " ", with: ""), style: .default, handler: { action in
+            
+            if let ocrResult = ocrResult {
+                let result = self.extractEmailAddrIn(text: ocrResult.annotations[0].text)
+                print(result)
+                if result.count == 0 {
+                    let alert = UIAlertController(title: "Email not found", message: "", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                         self.dismiss(animated: false, completion: nil)
                     }))
+                    self.present(alert, animated: true, completion: nil)
+                } else {
+                    let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+                    for i in 1...result.count{
+                        alert.addAction(UIAlertAction(title: result[i-1].replacingOccurrences(of: " ", with: ""), style: .default, handler: { action in
+                            self.dismiss(animated: false, completion: nil)
+                        }))
+                    }
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        self.dismiss(animated: false, completion: nil)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }
+            } else {
+                let alert = UIAlertController(title: "Cannot detect any text", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     self.dismiss(animated: false, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
             }
+            
         }
     }
     

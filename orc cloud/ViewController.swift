@@ -11,17 +11,20 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var flashMode: UISwitch!
     @IBOutlet weak var captureView: UIView!
     var captureSession: AVCaptureSession!
     var tapRecognizer: UITapGestureRecognizer!
     var capturePhotoOutput: AVCapturePhotoOutput!
     var readyImage: UIImage!
+    var flashStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCamera()
 //        setupTapRecognizer()
         setupPhotoOutput()
+        flashMode.isOn = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +68,12 @@ class ViewController: UIViewController {
 //    }
     
     @IBAction func capture(_ sender: Any) {
-        capturePhoto()
+        if flashMode.isOn == true {
+            flashStatus = true
+        } else {
+            flashStatus = false
+        }
+        capturePhoto(flashStatus: flashStatus)
     }
     private func setupPhotoOutput() {
         capturePhotoOutput = AVCapturePhotoOutput()
@@ -83,17 +91,23 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : AVCapturePhotoCaptureDelegate {
-    private func capturePhoto() {
+    private func capturePhoto(flashStatus : Bool) {
         let photoSettings = AVCapturePhotoSettings()
         photoSettings.isAutoStillImageStabilizationEnabled = true
         photoSettings.isHighResolutionPhotoEnabled = true
-        photoSettings.flashMode = .auto
+        if (flashStatus == true) {
+            photoSettings.flashMode = .on
+        } else {
+            photoSettings.flashMode = .off
+        }
+        
         capturePhotoOutput?.capturePhoto(with: photoSettings, delegate: self)
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput,
                      didFinishProcessingPhoto photo: AVCapturePhoto,
                      error: Error?) {
+        AudioServicesDisposeSystemSoundID(1108)
         guard error == nil else {
             fatalError("Failed to capture photo: \(String(describing: error))")
         }
