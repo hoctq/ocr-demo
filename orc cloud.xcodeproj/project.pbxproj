@@ -3,18 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25DF1940BA108F826C80C842 /* Pods_orc_cloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 968A8490668B21FA6B0197F2 /* Pods_orc_cloud.framework */; };
 		3495E22123260EB0006B4F4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495E22023260EB0006B4F4C /* AppDelegate.swift */; };
 		3495E22323260EB0006B4F4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495E22223260EB0006B4F4C /* ViewController.swift */; };
 		3495E22623260EB0006B4F4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3495E22423260EB0006B4F4C /* Main.storyboard */; };
 		3495E22823260EB2006B4F4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3495E22723260EB2006B4F4C /* Assets.xcassets */; };
 		3495E22B23260EB2006B4F4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3495E22923260EB2006B4F4C /* LaunchScreen.storyboard */; };
+		34C1B697232785E500ACB865 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1B696232785E500ACB865 /* ImageViewController.swift */; };
+		34C1B69923289AE000ACB865 /* GoogleCloudOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1B69823289AE000ACB865 /* GoogleCloudOCR.swift */; };
+		34C1B69B2328B2AE00ACB865 /* GoogleCloudOCRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C1B69A2328B2AE00ACB865 /* GoogleCloudOCRModel.swift */; };
+		34D75C7E23387A4E00657B7B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D75C7D23387A4E00657B7B /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23380279C5C0C177EF89CF84 /* Pods-orc cloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orc cloud.release.xcconfig"; path = "Target Support Files/Pods-orc cloud/Pods-orc cloud.release.xcconfig"; sourceTree = "<group>"; };
 		3495E21D23260EB0006B4F4C /* orc cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "orc cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3495E22023260EB0006B4F4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3495E22223260EB0006B4F4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,12 @@
 		3495E22723260EB2006B4F4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3495E22A23260EB2006B4F4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3495E22C23260EB2006B4F4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C1B696232785E500ACB865 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		34C1B69823289AE000ACB865 /* GoogleCloudOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudOCR.swift; sourceTree = "<group>"; };
+		34C1B69A2328B2AE00ACB865 /* GoogleCloudOCRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudOCRModel.swift; sourceTree = "<group>"; };
+		34D75C7D23387A4E00657B7B /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		968A8490668B21FA6B0197F2 /* Pods_orc_cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orc_cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BF906AC49CDC086DB6CA29 /* Pods-orc cloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orc cloud.debug.xcconfig"; path = "Target Support Files/Pods-orc cloud/Pods-orc cloud.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DF1940BA108F826C80C842 /* Pods_orc_cloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				3495E21F23260EB0006B4F4C /* orc cloud */,
 				3495E21E23260EB0006B4F4C /* Products */,
+				43148C986ACDBD28DC13BE7C /* Pods */,
+				A06158DD432834FE555AA850 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +71,33 @@
 			children = (
 				3495E22023260EB0006B4F4C /* AppDelegate.swift */,
 				3495E22223260EB0006B4F4C /* ViewController.swift */,
+				34C1B696232785E500ACB865 /* ImageViewController.swift */,
 				3495E22423260EB0006B4F4C /* Main.storyboard */,
+				34D75C7D23387A4E00657B7B /* TestViewController.swift */,
 				3495E22723260EB2006B4F4C /* Assets.xcassets */,
 				3495E22923260EB2006B4F4C /* LaunchScreen.storyboard */,
 				3495E22C23260EB2006B4F4C /* Info.plist */,
+				34C1B69823289AE000ACB865 /* GoogleCloudOCR.swift */,
+				34C1B69A2328B2AE00ACB865 /* GoogleCloudOCRModel.swift */,
 			);
 			path = "orc cloud";
+			sourceTree = "<group>";
+		};
+		43148C986ACDBD28DC13BE7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3BF906AC49CDC086DB6CA29 /* Pods-orc cloud.debug.xcconfig */,
+				23380279C5C0C177EF89CF84 /* Pods-orc cloud.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A06158DD432834FE555AA850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				968A8490668B21FA6B0197F2 /* Pods_orc_cloud.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3495E22F23260EB2006B4F4C /* Build configuration list for PBXNativeTarget "orc cloud" */;
 			buildPhases = (
+				D68D86EC87B47DC74EA2CCFB /* [CP] Check Pods Manifest.lock */,
 				3495E21923260EB0006B4F4C /* Sources */,
 				3495E21A23260EB0006B4F4C /* Frameworks */,
 				3495E21B23260EB0006B4F4C /* Resources */,
+				0C2CA09C8E3F9AD542BFA3C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +168,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C2CA09C8E3F9AD542BFA3C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-orc cloud/Pods-orc cloud-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-orc cloud/Pods-orc cloud-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-orc cloud/Pods-orc cloud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D68D86EC87B47DC74EA2CCFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-orc cloud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3495E21923260EB0006B4F4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3495E22323260EB0006B4F4C /* ViewController.swift in Sources */,
+				34C1B697232785E500ACB865 /* ImageViewController.swift in Sources */,
 				3495E22123260EB0006B4F4C /* AppDelegate.swift in Sources */,
+				34C1B69923289AE000ACB865 /* GoogleCloudOCR.swift in Sources */,
+				34D75C7E23387A4E00657B7B /* TestViewController.swift in Sources */,
+				34C1B69B2328B2AE00ACB865 /* GoogleCloudOCRModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +364,13 @@
 		};
 		3495E23023260EB2006B4F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3BF906AC49CDC086DB6CA29 /* Pods-orc cloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XU42ZD4RFF;
 				INFOPLIST_FILE = "orc cloud/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +384,13 @@
 		};
 		3495E23123260EB2006B4F4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23380279C5C0C177EF89CF84 /* Pods-orc cloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XU42ZD4RFF;
 				INFOPLIST_FILE = "orc cloud/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
